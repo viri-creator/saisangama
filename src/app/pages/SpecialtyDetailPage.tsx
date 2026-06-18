@@ -13,7 +13,7 @@ export function SpecialtyDetailPage() {
   if (!specialty) {
     return (
       <PageLayout>
-        <div className="max-w-[1150px] mx-auto px-12 py-24 text-center">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12 py-24 text-center">
           <h1 className="font-['Poppins:Bold',sans-serif] text-[36px] text-[#1e1e1e] mb-4">Specialty Not Found</h1>
           <p className="font-['Roboto:Regular',sans-serif] text-[16px] text-gray-600 mb-8">
             The specialty you're looking for doesn't exist.
@@ -33,8 +33,8 @@ export function SpecialtyDetailPage() {
   return (
     <PageLayout>
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-16 overflow-hidden">
-        <div className="max-w-[1150px] mx-auto px-12">
+      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-12 md:py-16 overflow-hidden">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
             <Link
               to="/services"
@@ -45,7 +45,7 @@ export function SpecialtyDetailPage() {
             </Link>
           </motion.div>
           <motion.h1
-            className="font-['Poppins:Bold',sans-serif] text-[48px] mb-4"
+            className="font-['Poppins:Bold',sans-serif] text-[32px] md:text-[48px] mb-4"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
           >
             {specialty.name}
@@ -59,9 +59,9 @@ export function SpecialtyDetailPage() {
         </div>
       </div>
 
-      <div className="max-w-[1150px] mx-auto px-12 py-16">
-        <div className="grid grid-cols-3 gap-12">
-          <div className="col-span-2">
+      <div className="max-w-[1150px] mx-auto px-4 md:px-12 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="col-span-1 lg:col-span-2">
             <motion.div
               className="mb-12"
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
@@ -95,7 +95,7 @@ export function SpecialtyDetailPage() {
               <h3 className="font-['Poppins:SemiBold',sans-serif] text-[24px] text-[#1e1e1e] mb-6">
                 Services We Provide
               </h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {specialty.services.map((service, index) => (
                   <motion.div
                     key={index}
@@ -143,7 +143,7 @@ export function SpecialtyDetailPage() {
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-1">
+          <div className="col-span-1 lg:col-span-1">
             <motion.div
               className="bg-white border-2 border-[#00a6ff] rounded-2xl p-8 sticky top-24"
               initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }}

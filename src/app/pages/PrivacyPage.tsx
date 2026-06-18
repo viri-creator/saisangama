@@ -90,8 +90,8 @@ export function PrivacyPage() {
   return (
     <PageLayout>
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-20">
-        <div className="max-w-[1150px] mx-auto px-12">
+      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-12 md:py-20">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
           <motion.div className="flex items-center gap-4 mb-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="bg-white/20 rounded-full p-3">
@@ -100,7 +100,7 @@ export function PrivacyPage() {
             <span className="font-['Poppins:SemiBold',sans-serif] text-[14px] text-white/70 uppercase tracking-widest">Legal</span>
           </motion.div>
           <motion.h1
-            className="font-['Poppins:Bold',sans-serif] text-[52px] mb-4"
+            className="font-['Poppins:Bold',sans-serif] text-[32px] md:text-[52px] mb-4"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
           >
             Privacy Policy
@@ -114,7 +114,7 @@ export function PrivacyPage() {
         </div>
       </div>
 
-      <div className="max-w-[900px] mx-auto px-12 py-16">
+      <div className="max-w-[900px] mx-auto px-4 md:px-12 py-16">
         <motion.p
           className="font-['Roboto:Regular',sans-serif] text-[16px] text-gray-600 leading-[28px] mb-12 p-6 bg-blue-50 rounded-xl border border-blue-100"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}

@@ -21,10 +21,10 @@ export function ServicesPage() {
     <>
       <PageLayout>
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-24 overflow-hidden">
-        <div className="max-w-[1150px] mx-auto px-12">
+      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-12 md:py-24 overflow-hidden">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
           <motion.h1
-            className="font-['Poppins:Bold',sans-serif] text-[48px] mb-6"
+            className="font-['Poppins:Bold',sans-serif] text-[32px] md:text-[48px] mb-6"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
           >
             Services & Specialities
@@ -38,7 +38,7 @@ export function ServicesPage() {
         </div>
       </div>
 
-      <div className="max-w-[1150px] mx-auto px-12 py-16">
+      <div className="max-w-[1150px] mx-auto px-4 md:px-12 py-16">
         {/* Main Services */}
         <div className="mb-20">
           <motion.div
@@ -49,7 +49,7 @@ export function ServicesPage() {
             <div className="bg-[#00a6ff] h-[3px] rounded-[11px] w-[80px] mb-12" />
           </motion.div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mainServices.map((service, i) => (
               <motion.div
                 key={service.id}
@@ -79,7 +79,7 @@ export function ServicesPage() {
           initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="grid grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -104,7 +104,7 @@ export function ServicesPage() {
             <div className="bg-[#00a6ff] h-[3px] rounded-[11px] w-[80px] mb-12" />
           </motion.div>
 
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {specialties.map((specialty, i) => (
               <motion.div
                 key={specialty.id}
@@ -154,7 +154,7 @@ export function ServicesPage() {
           <p className="font-['Roboto:Regular',sans-serif] text-[16px] mb-8 max-w-2xl mx-auto">
             Our team of experienced healthcare professionals is ready to help you. Contact us today to schedule an appointment or learn more about our services.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
               onClick={openModal}
               className="bg-white text-[#00a6ff] px-8 py-3 rounded-lg font-['Poppins:SemiBold',sans-serif] text-[16px] hover:bg-gray-100 transition-colors"

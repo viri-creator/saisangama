@@ -109,7 +109,7 @@ export function AboutPage() {
     <PageLayout>
 
       {/* ── Breadcrumb ── */}
-      <div className="bg-[#f4f4f4] px-12 py-4 border-b border-gray-200">
+      <div className="bg-[#f4f4f4] px-4 md:px-12 py-4 border-b border-gray-200">
         <div className="max-w-[1150px] mx-auto flex items-center gap-2">
           <span className="font-['Poppins:Bold',sans-serif] text-[18px] text-[#1e1e1e]">About</span>
           <span className="text-gray-300 mx-1">|</span>
@@ -120,9 +120,9 @@ export function AboutPage() {
       </div>
 
       {/* ── Section 1: WHO WE ARE ── */}
-      <section className="bg-[#f4f4f4] py-20">
-        <div className="max-w-[1150px] mx-auto px-12">
-          <div className="grid grid-cols-2 gap-20 items-center">
+      <section className="bg-[#f4f4f4] py-12 md:py-20">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
 
             {/* Stacked images */}
             <motion.div
@@ -185,9 +185,9 @@ export function AboutPage() {
       </section>
 
       {/* ── Section 2: Why is it worth it ── */}
-      <section className="bg-white py-20">
-        <div className="max-w-[1150px] mx-auto px-12">
-          <div className="grid grid-cols-2 gap-16 items-center">
+      <section className="bg-white py-12 md:py-20">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
             {/* Content */}
             <motion.div
@@ -202,7 +202,7 @@ export function AboutPage() {
               <p className="font-['Roboto:Regular',sans-serif] text-[14px] text-gray-500 leading-[24px] mb-8">
                 No appointment needed, most patients are seen, treated and released in about 60 minutes. Certified and experienced MD physicians not nurses and on site diagnostic tests with lab.
               </p>
-              <div className="grid grid-cols-2 gap-y-4 gap-x-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6">
                 {[
                   'Behavioral health',
                   'Minor cuts and wounds',
@@ -239,8 +239,8 @@ export function AboutPage() {
       </section>
 
       {/* ── Section 3: Why Choose Us ── */}
-      <section className="bg-[#0d1b2a] py-20">
-        <div className="max-w-[1150px] mx-auto px-12">
+      <section className="bg-[#0d1b2a] py-12 md:py-20">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
@@ -252,7 +252,7 @@ export function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {whyCards.map((card, i) => (
               <motion.div
                 key={i}
@@ -279,9 +279,9 @@ export function AboutPage() {
       </section>
 
       {/* ── Section 4: Family Birth Center ── */}
-      <section className="bg-white py-20">
-        <div className="max-w-[1150px] mx-auto px-12">
-          <div className="grid grid-cols-2 gap-16 items-center">
+      <section className="bg-white py-12 md:py-20">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
             {/* Image */}
             <motion.div

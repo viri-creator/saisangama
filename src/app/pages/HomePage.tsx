@@ -64,14 +64,14 @@ export function HomePage() {
           50% { background-position: 100% 50%; box-shadow: 0 0 8px 2px rgba(6,182,212,0.7); }
         }
       `}</style>
-        <div className="max-w-[1280px] mx-auto px-8 py-24 flex items-center justify-between gap-12">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-8 py-12 md:py-24 flex flex-col md:flex-row items-center justify-between gap-12">
           <motion.div
             variants={slideLeft} initial="hidden" animate="visible"
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="flex flex-col items-start w-[533px] shrink-0"
+            className="flex flex-col items-start w-full md:w-[533px] shrink-0"
           >
             <div className="w-full">
-              <p className="font-['Inter:Bold',sans-serif] font-bold text-[48px] leading-[60px] text-[#101828] whitespace-nowrap">Your Health, Our{' '}
+              <p className="font-['Inter:Bold',sans-serif] font-bold text-[32px] md:text-[48px] leading-[40px] md:leading-[60px] text-[#101828]">Your Health, Our{' '}
                 <span className="bg-clip-text bg-gradient-to-r from-[#00b8db] to-[#155dfc] text-transparent">Priority</span>
               </p>
               <motion.div
@@ -84,11 +84,11 @@ export function HomePage() {
             </div>
             <motion.p
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }}
-              className="mt-8 font-['Inter:Regular',sans-serif] text-[#4a5565] text-[18px] leading-[29.25px] w-[533px]"
+              className="mt-8 font-['Inter:Regular',sans-serif] text-[#4a5565] text-[18px] leading-[29.25px] w-full md:w-[533px]"
             >
               Providing compassionate, world-class medical care with state-of-the-art facilities and experienced healthcare professionals dedicated to your wellbeing.
             </motion.p>
-            <div className="mt-8 flex gap-6">
+            <div className="mt-8 flex flex-col sm:flex-row gap-6">
               {[
                 {
                   delay: 0.6,
@@ -143,7 +143,7 @@ export function HomePage() {
                   initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: card.delay, duration: 0.5 }}
                   whileHover={{ y: -6, scale: 1.02 }}
-                  className="p-6 rounded-2xl text-white flex flex-col gap-3 w-[258px] drop-shadow-[0px_20px_12.5px_rgba(0,0,0,0.1)] cursor-pointer"
+                  className="p-6 rounded-2xl text-white flex flex-col gap-3 w-full sm:w-[258px] drop-shadow-[0px_20px_12.5px_rgba(0,0,0,0.1)] cursor-pointer"
                   style={{ backgroundImage: card.bg }}
                 >
                   {card.content}
@@ -155,7 +155,7 @@ export function HomePage() {
           <motion.div
             variants={slideRight} initial="hidden" animate="visible"
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-            className="relative w-[533px] shrink-0"
+            className="relative w-full md:w-[533px] shrink-0"
           >
             <motion.div
               whileHover={{ scale: 1.02 }}
@@ -172,13 +172,13 @@ export function HomePage() {
       </div>
 
       {/* About Section */}
-      <div className="bg-white w-full py-20">
-        <div className="max-w-[1280px] mx-auto px-8 flex items-center gap-16 relative">
+      <div className="bg-white w-full py-12 md:py-20">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center gap-16 relative">
           <motion.div
             variants={slideLeft} initial="hidden" whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7 }}
-            className="relative w-[533px] shrink-0 h-[400px]"
+            className="relative w-full md:w-[533px] shrink-0 h-[300px] md:h-[400px]"
           >
             <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)]">
               <img alt="About SaiSangama" className="w-full h-full object-cover" src={imgAbout} />
@@ -188,17 +188,17 @@ export function HomePage() {
             variants={slideRight} initial="hidden" whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7 }}
-            className="flex flex-col items-start w-[533px]"
+            className="flex flex-col items-start w-full md:w-[533px]"
           >
             <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold text-[#0092b8] text-[14px] leading-[20px] tracking-[0.7px] uppercase">About Us</p>
             <div className="mt-3">
               <p className="font-['Inter:Bold',sans-serif] font-bold text-[#101828] text-[36px] leading-[40px]">Welcome to SaiSangama</p>
               <div className="mt-3 w-24 h-1 rounded-full bg-gradient-to-r from-[#00b8db] to-[#155dfc]" />
             </div>
-            <p className="mt-6 font-['Inter:Regular',sans-serif] text-[#4a5565] text-[16px] leading-[26px] w-[533px]">
+            <p className="mt-6 font-['Inter:Regular',sans-serif] text-[#4a5565] text-[16px] leading-[26px] w-full md:w-[533px]">
               For over 50 years, we have been committed to providing exceptional healthcare services to our community. Our team of dedicated healthcare professionals combines cutting-edge medical technology with compassionate care to ensure the best outcomes for our patients.
             </p>
-            <p className="mt-6 font-['Inter:Regular',sans-serif] text-[#4a5565] text-[16px] leading-[26px] w-[533px]">
+            <p className="mt-6 font-['Inter:Regular',sans-serif] text-[#4a5565] text-[16px] leading-[26px] w-full md:w-[533px]">
               From routine checkups to complex surgical procedures, we offer comprehensive medical services across multiple specialties, all under one roof. Your health and wellbeing are at the heart of everything we do.
             </p>
             <Link to="/about">
@@ -215,8 +215,8 @@ export function HomePage() {
       </div>
 
       {/* Why Choose Us */}
-      <div className="w-full py-20 bg-gradient-to-b from-[#f9fafb] to-white">
-        <div className="max-w-[1280px] mx-auto px-8">
+      <div className="w-full py-12 md:py-20 bg-gradient-to-b from-[#f9fafb] to-white">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-8">
           <motion.div
             variants={fadeUp} initial="hidden" whileInView="visible"
             viewport={{ once: true, amount: 0.4 }}
@@ -227,7 +227,7 @@ export function HomePage() {
             <p className="mt-4 font-['Inter:Bold',sans-serif] font-bold text-[#101828] text-[36px] leading-[40px] text-center">Learn What is Best For U</p>
             <div className="mt-4 w-full max-w-[1114px] h-1 rounded-full bg-gradient-to-r from-[#00b8db] to-[#155dfc]" />
           </motion.div>
-          <div className="mt-16 flex justify-center gap-8">
+          <div className="mt-16 flex flex-col md:flex-row justify-center gap-8">
             {[
               { title: 'Healthcare with Human touch', icon: (<svg className="size-12" fill="none" viewBox="0 0 48 48"><path d={svgPaths.p2b3c4500} stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /><path d={svgPaths.p31eb3600} stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /><path d="M32 22L36 26L44 18" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /></svg>) },
               { title: 'Expert Consultancy and Diagnostics', icon: (<svg className="size-12" fill="none" viewBox="0 0 48 48"><path d={svgPaths.p28f1080} stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /><path d={svgPaths.p1c511500} stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /><path d="M24 22H32" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /><path d="M24 32H32" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /><path d="M16 22H16.02" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /><path d="M16 32H16.02" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" /></svg>) },
@@ -239,7 +239,7 @@ export function HomePage() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.12)' }}
-                className="bg-white rounded-2xl p-8 w-[320px] flex flex-col items-center drop-shadow-[0px_10px_7.5px_rgba(0,0,0,0.1)] border border-[#f3f4f6] cursor-pointer"
+                className="bg-white rounded-2xl p-8 w-full md:w-[320px] flex flex-col items-center drop-shadow-[0px_10px_7.5px_rgba(0,0,0,0.1)] border border-[#f3f4f6] cursor-pointer"
               >
                 <div className="size-24 rounded-full flex items-center justify-center drop-shadow-[0px_10px_7.5px_rgba(0,0,0,0.1)]" style={{ backgroundImage: 'linear-gradient(135deg, rgb(0, 146, 184) 0%, rgb(20, 71, 230) 100%)' }}>
                   {item.icon}
@@ -252,8 +252,8 @@ export function HomePage() {
       </div>
 
       {/* Comprehensive Medical Care */}
-      <div className="bg-white w-full py-20">
-        <div className="max-w-[1280px] mx-auto px-8">
+      <div className="bg-white w-full py-12 md:py-20">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-8">
           <motion.div
             variants={fadeUp} initial="hidden" whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -264,7 +264,7 @@ export function HomePage() {
             <p className="mt-4 font-['Inter:Bold',sans-serif] font-bold text-[#101828] text-[36px] leading-[40px] text-center">Comprehensive Medical Care</p>
             <div className="mt-4 w-full max-w-[1114px] h-1 rounded-full bg-gradient-to-r from-[#00b8db] to-[#155dfc]" />
           </motion.div>
-          <div className="mt-16 grid grid-cols-3 gap-6">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: 'Emergency Care', desc: '24/7 emergency services with rapid response teams and state-of-the-art trauma care facilities.', color: 'bg-[#cefafe]', icon: <><path d="M11.6667 11.6667H7" stroke="#0092B8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /><path d={svgPaths.p12cc5000} stroke="#0092B8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /><path d={svgPaths.p2550cf00} stroke="#0092B8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /><path d="M9.33333 9.33333V14" stroke="#0092B8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /><path d="M10.5 21H17.5" stroke="#0092B8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /><path d={svgPaths.pa689e00} stroke="#0092B8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /><path d={svgPaths.p26ea4300} stroke="#0092B8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /></> },
               { title: 'Primary Care', desc: 'Comprehensive primary care services including preventive care, checkups, and chronic disease management.', color: 'bg-[#dbeafe]', icon: <><path d={svgPaths.p184ba090} stroke="#155DFC" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /><path d={svgPaths.p5d36b00} stroke="#155DFC" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /><path d={svgPaths.p3dc88f80} stroke="#155DFC" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.33333" /></> },
@@ -320,7 +320,7 @@ export function HomePage() {
           <motion.div
             variants={fadeUp} initial="hidden" whileInView="visible"
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 flex gap-4"
+            className="mt-10 flex flex-col sm:flex-row gap-4"
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link

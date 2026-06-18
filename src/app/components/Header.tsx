@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import imgImageLogo from '../../imports/logo.png';
 import { ContactModal, useContactModal } from './ContactModal';
 import { specialties } from '../data/specialties';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 const doctors = [
   { name: 'Dr. Abhijit Vilas Kulkarni', specialty: 'Cardiologist' },
@@ -34,6 +34,7 @@ export function Header() {
   const { isOpen, openModal, closeModal } = useContactModal();
   const [doctorsOpen, setDoctorsOpen] = useState(false);
   const [specialtiesOpen, setSpecialtiesOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const doctorsRef = useRef<HTMLDivElement>(null);
   const specialtiesRef = useRef<HTMLDivElement>(null);
 
@@ -53,12 +54,13 @@ export function Header() {
   return (
     <>
       <div className="bg-white drop-shadow-[0px_4px_3px_rgba(0,0,0,0.1),0px_2px_2px_rgba(0,0,0,0.1)] w-full sticky top-0 z-50">
-        <div className="max-w-[1150px] mx-auto px-12 h-[100px] flex items-center gap-24 justify-between">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12 h-[70px] md:h-[100px] flex items-center justify-between">
           <Link to="/" className="shrink-0">
-            <img alt="SaiSangama Healthcare" className="h-[60px] w-[226.8px] object-contain" src={imgImageLogo} />
+            <img alt="SaiSangama Healthcare" className="h-[44px] md:h-[60px] w-auto object-contain" src={imgImageLogo} />
           </Link>
 
-          <nav className="flex gap-10 items-center flex-1 justify-end">
+          {/* Desktop nav */}
+          <nav className="hidden md:flex gap-10 items-center flex-1 justify-end">
             <NavLink to="/" label="Home" />
             <NavLink to="/about" label="About" />
 
@@ -165,7 +167,36 @@ export function Header() {
               Book Appointment
             </Link>
           </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden p-2 text-gray-700 hover:text-[#00a6ff] transition-colors"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <nav className="flex flex-col px-4 py-4 gap-1">
+              <Link to="/" onClick={() => setMobileMenuOpen(false)} className="py-3 px-3 rounded-lg font-['Poppins:SemiBold',sans-serif] text-[16px] text-gray-800 hover:bg-[#00a6ff]/10 hover:text-[#00a6ff] transition-colors">Home</Link>
+              <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="py-3 px-3 rounded-lg font-['Poppins:SemiBold',sans-serif] text-[16px] text-gray-800 hover:bg-[#00a6ff]/10 hover:text-[#00a6ff] transition-colors">About</Link>
+              <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="py-3 px-3 rounded-lg font-['Poppins:SemiBold',sans-serif] text-[16px] text-gray-800 hover:bg-[#00a6ff]/10 hover:text-[#00a6ff] transition-colors">Specialties</Link>
+              <Link to="/doctors" onClick={() => setMobileMenuOpen(false)} className="py-3 px-3 rounded-lg font-['Poppins:SemiBold',sans-serif] text-[16px] text-gray-800 hover:bg-[#00a6ff]/10 hover:text-[#00a6ff] transition-colors">Doctors</Link>
+              <button onClick={() => { openModal(); setMobileMenuOpen(false); }} className="py-3 px-3 rounded-lg text-left font-['Poppins:SemiBold',sans-serif] text-[16px] text-gray-800 hover:bg-[#00a6ff]/10 hover:text-[#00a6ff] transition-colors">Contact</button>
+              <Link
+                to="/book-appointment"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mt-2 bg-gradient-to-r from-[#00b8db] to-[#155dfc] text-white px-6 py-3 rounded-[10px] font-['Inter:Medium',sans-serif] font-medium text-[16px] text-center hover:opacity-90 transition-opacity"
+              >
+                Book Appointment
+              </Link>
+            </nav>
+          </div>
+        )}
       </div>
 
       <ContactModal isOpen={isOpen} onClose={closeModal} />

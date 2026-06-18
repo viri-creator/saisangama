@@ -5,8 +5,8 @@ export function Footer() {
   return (
     <div className="bg-[#0d1b2a] w-full">
       {/* Main footer */}
-      <div className="max-w-[1150px] mx-auto px-12 py-16">
-        <div className="grid grid-cols-4 gap-12">
+      <div className="max-w-[1150px] mx-auto px-4 md:px-12 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
 
           {/* Opening Hours */}
           <div>
@@ -103,7 +103,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-[#1a2e45]">
-        <div className="max-w-[1150px] mx-auto px-12 py-6 flex items-center justify-between gap-8">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
           <p className="font-['Roboto:Regular',sans-serif] text-[14px] text-[#6b7280] whitespace-nowrap">
             © 2026 SaiSangama Diagnostics & Health Care. All rights reserved.
           </p>

@@ -6,8 +6,8 @@ export function FindUsPage() {
   return (
     <PageLayout>
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-20">
-        <div className="max-w-[1150px] mx-auto px-12">
+      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-12 md:py-20">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
           <motion.div className="flex items-center gap-4 mb-4"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="bg-white/20 rounded-full p-3">
@@ -16,7 +16,7 @@ export function FindUsPage() {
             <span className="font-['Poppins:SemiBold',sans-serif] text-[14px] text-white/70 uppercase tracking-widest">Location</span>
           </motion.div>
           <motion.h1
-            className="font-['Poppins:Bold',sans-serif] text-[52px] mb-4"
+            className="font-['Poppins:Bold',sans-serif] text-[32px] md:text-[52px] mb-4"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
           >
             Find Us
@@ -30,8 +30,8 @@ export function FindUsPage() {
         </div>
       </div>
 
-      <div className="max-w-[1150px] mx-auto px-12 py-16">
-        <div className="grid grid-cols-2 gap-12 items-start">
+      <div className="max-w-[1150px] mx-auto px-4 md:px-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
 
           {/* Map */}
           <motion.div
@@ -136,7 +136,7 @@ export function FindUsPage() {
 
         {/* WhatsApp CTA */}
         <motion.div
-          className="mt-12 bg-gradient-to-r from-[#25D366] to-[#128C7E] rounded-2xl p-8 flex items-center justify-between"
+          className="mt-12 bg-gradient-to-r from-[#25D366] to-[#128C7E] rounded-2xl p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between"
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >

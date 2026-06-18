@@ -84,10 +84,10 @@ export function DoctorsPage() {
     <>
       <PageLayout>
         {/* Hero */}
-        <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-24 overflow-hidden">
-          <div className="max-w-[1150px] mx-auto px-12">
+        <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-12 md:py-24 overflow-hidden">
+          <div className="max-w-[1150px] mx-auto px-4 md:px-12">
             <motion.h1
-              className="font-['Poppins:Bold',sans-serif] text-[52px] mb-4"
+              className="font-['Poppins:Bold',sans-serif] text-[32px] md:text-[52px] mb-4"
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             >
               Our Doctors
@@ -101,7 +101,7 @@ export function DoctorsPage() {
           </div>
         </div>
 
-        <div className="max-w-[1150px] mx-auto px-12 py-16">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12 py-16">
           {/* Search & Filter */}
           <motion.div
             className="flex flex-col gap-6 mb-12"
@@ -140,7 +140,7 @@ export function DoctorsPage() {
               <p className="font-['Roboto:Regular',sans-serif] text-[16px] text-gray-500">No doctors found matching your search.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((doctor, i) => (
                 <motion.div
                   key={doctor.name}
@@ -191,7 +191,7 @@ export function DoctorsPage() {
             <p className="font-['Roboto:Regular',sans-serif] text-[16px] text-white/90 mb-8 max-w-xl mx-auto">
               Call us and our team will help you find the right doctor for your needs.
             </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 onClick={openModal}
                 className="bg-white text-[#00a6ff] px-8 py-3 rounded-lg font-['Poppins:SemiBold',sans-serif] text-[16px] hover:bg-gray-100 transition-colors"

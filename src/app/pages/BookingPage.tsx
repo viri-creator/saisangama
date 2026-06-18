@@ -88,10 +88,10 @@ export function BookingPage() {
   return (
     <PageLayout>
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-20">
-        <div className="max-w-[1150px] mx-auto px-12">
+      <div className="bg-gradient-to-br from-[#00a6ff] to-[#0080cc] text-white py-12 md:py-20">
+        <div className="max-w-[1150px] mx-auto px-4 md:px-12">
           <motion.h1
-            className="font-['Poppins:Bold',sans-serif] text-[52px] mb-4"
+            className="font-['Poppins:Bold',sans-serif] text-[32px] md:text-[52px] mb-4"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
           >
             Book an Appointment
@@ -105,11 +105,11 @@ export function BookingPage() {
         </div>
       </div>
 
-      <div className="max-w-[1150px] mx-auto px-12 py-16">
-        <div className="grid grid-cols-3 gap-12 items-start">
+      <div className="max-w-[1150px] mx-auto px-4 md:px-12 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
 
           {/* Form */}
-          <div className="col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             {submitted ? (
               <motion.div
                 className="text-center py-20"
@@ -267,7 +267,7 @@ export function BookingPage() {
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-1">
+          <div className="col-span-1 lg:col-span-1">
             <motion.div
               className="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden sticky top-24"
               initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
