@@ -3,6 +3,7 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { PageLayout } from '../components/PageLayout';
 import { CheckCircle, Phone, Mail, MapPin, Clock, Loader2 } from 'lucide-react';
+import { Link } from 'react-router';
 
 const EMAILJS_SERVICE_ID  = 'service_6mx86qg';
 const EMAILJS_TEMPLATE_ID = 'template_2b0gj8o';
@@ -295,15 +296,15 @@ export function BookingPage() {
                     <p className="font-['Roboto:Regular',sans-serif] text-[13px] text-[#00a6ff] break-all">healthcare@saisangamahealthcare.com</p>
                   </div>
                 </a>
-                <div className="flex items-start gap-3">
+                <Link to="/find-us" className="flex items-start gap-3 hover:opacity-80 transition-opacity">
                   <div className="bg-[#00a6ff]/10 rounded-full p-2.5">
                     <MapPin className="w-5 h-5 text-[#00a6ff]" />
                   </div>
                   <div>
                     <p className="font-['Poppins:SemiBold',sans-serif] text-[13px] text-gray-500">Address</p>
-                    <p className="font-['Roboto:Regular',sans-serif] text-[14px] text-gray-700 leading-[20px]">19, 29th A Cross Rd, 7th Block,<br />Yediyur, Jayanagar, Bengaluru - 560070</p>
+                    <p className="font-['Roboto:Regular',sans-serif] text-[14px] text-[#00a6ff] leading-[20px]">19, 29th A Cross Rd, 7th Block,<br />Yediyur, Jayanagar, Bengaluru - 560070</p>
                   </div>
-                </div>
+                </Link>
                 <div className="border-t border-gray-100 pt-4">
                   <div className="flex items-center gap-3">
                     <div className="bg-[#00a6ff]/10 rounded-full p-2.5">

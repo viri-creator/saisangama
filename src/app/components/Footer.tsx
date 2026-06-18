@@ -64,14 +64,14 @@ export function Footer() {
             </h3>
             <div className="bg-gradient-to-r from-[#00b8db] to-[#155dfc] h-[3px] rounded-full w-[48px] mb-6" />
             <div className="flex flex-col gap-4">
-              <div className="flex items-start gap-3">
+              <Link to="/find-us" className="flex items-start gap-3 hover:opacity-80 transition-opacity">
                 <div className="bg-[#1a2e45] rounded-full p-2 shrink-0 mt-0.5">
                   <MapPin className="w-4 h-4 text-[#00b8db]" />
                 </div>
                 <p className="font-['Roboto:Regular',sans-serif] text-[14px] text-[#a0aec0] leading-[22px]">
                   19, 29th A Cross Rd, 7th Block,<br />Yediyur, Jayanagar,<br />Bengaluru - 560070
                 </p>
-              </div>
+              </Link>
               <div className="flex items-center gap-3">
                 <div className="bg-[#1a2e45] rounded-full p-2 shrink-0">
                   <Phone className="w-4 h-4 text-[#00b8db]" />

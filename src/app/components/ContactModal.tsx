@@ -1,5 +1,6 @@
 import { X, Phone, Mail, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -80,7 +81,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
           </div>
 
-          <div className="flex items-start gap-4 p-4 bg-blue-50 rounded-lg">
+          <Link to="/find-us" className="flex items-start gap-4 p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
             <div className="bg-[#00a6ff] p-3 rounded-full shrink-0">
               <MapPin className="w-6 h-6 text-white" />
             </div>
@@ -88,12 +89,12 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <p className="font-['Poppins:SemiBold',sans-serif] text-[14px] text-gray-600 mb-1">
                 Address
               </p>
-              <p className="font-['Roboto:Regular',sans-serif] text-[14px] text-gray-700 leading-[21px]">
+              <p className="font-['Roboto:Regular',sans-serif] text-[14px] text-[#00a6ff] leading-[21px]">
                 19, 29th A Cross Rd, 7th Block,<br />
                 Yediyur, Jayanagar, Bengaluru - 560070
               </p>
             </div>
-          </div>
+          </Link>
 
           <div className="pt-4 border-t border-gray-200">
             <button
